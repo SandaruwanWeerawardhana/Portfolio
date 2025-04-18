@@ -16,9 +16,9 @@ export default defineConfig({
         'images/*.{jpg,png}',
       ],
       manifest: {
-        name: 'Darshan Gaikwad - Portfolio',
-        short_name: 'Darshan',
-        description: 'Portfolio website of Darshan Gaikwad, Frontend Developer specializing in React',
+        name: 'Sandaruwan Weerawardhana - Portfolio',
+        short_name: 'Sandaruwan',
+        description: '3',
         theme_color: '#0090f5',
         icons: [
           {

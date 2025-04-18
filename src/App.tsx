@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Services from './components/Services';
+// import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { AnalyticsProvider } from './components/AnalyticsProvider';
@@ -25,7 +25,7 @@ function App() {
             <Skills />
             <Experience />
             <Projects />
-            <Services />
+            {/* <Services /> */}
             <Contact />
             <Footer />
             

@@ -14,9 +14,9 @@ const Header = () => {
   const navItems = useMemo(() => [
     { name: 'About', to: 'about' },
     { name: 'Skills', to: 'skills' },
-    { name: 'Experience', to: 'experience' },
+    { name: 'Education', to: 'experience' },
     { name: 'Projects', to: 'projects' },
-    { name: 'Services', to: 'services' },
+    // { name: 'Services', to: 'services' },
     { name: 'Contact', to: 'contact' },
   ], []);
 

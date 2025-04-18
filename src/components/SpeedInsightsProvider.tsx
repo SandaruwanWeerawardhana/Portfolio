@@ -40,18 +40,18 @@ export function SpeedInsightsProvider({ children }: SpeedInsightsProviderProps) 
         const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
         if (navEntry) {
-          const metrics = {
-            'dom-content-loaded': navEntry.domContentLoadedEventEnd,
-            'load-complete': navEntry.loadEventEnd,
-            'ttfb': navEntry.responseStart - navEntry.requestStart,
-          };
+          // const metrics = {
+          //   'dom-content-loaded': navEntry.domContentLoadedEventEnd,
+          //   'load-complete': navEntry.loadEventEnd,
+          //   'ttfb': navEntry.responseStart - navEntry.requestStart,
+          // };
           
-          // Send all metrics in a single batch to reduce network requests
-          track('performance_metrics_batch', {metrics, navigationEntry: true, viewport: {
-              width: window.innerWidth,
-              height: window.innerHeight
-            }
-          });
+          // // Send all metrics in a single batch to reduce network requests
+          // track('performance_metrics_batch', {metrics, navigationEntry: true, viewport: {
+          //     width: window.innerWidth,
+          //     height: window.innerHeight
+          //   }
+          // });
         }
       }
     });

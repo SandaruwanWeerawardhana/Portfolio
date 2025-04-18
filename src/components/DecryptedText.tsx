@@ -1,6 +1,21 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+interface DecryptedTextProps {
+  text: string;
+  speed?: number;
+  maxIterations?: number;
+  sequential?: boolean;
+  revealDirection?: 'start' | 'end' | 'center';
+  useOriginalCharsOnly?: boolean;
+  characters?: string;
+  className?: string;
+  parentClassName?: string;
+  encryptedClassName?: string;
+  animateOn?: 'hover' | 'view';
+  [key: string]: any;
+}
+
 export default function DecryptedText({
   text,
   speed = 50,
@@ -14,43 +29,43 @@ export default function DecryptedText({
   encryptedClassName = '',
   animateOn = 'hover',
   ...props
-}) {
+}: DecryptedTextProps) {
   const [displayText, setDisplayText] = useState(text);
   const [isHovering, setIsHovering] = useState(false);
   const [isScrambling, setIsScrambling] = useState(false);
-  const [revealedIndices, setRevealedIndices] = useState(new Set());
+  const [revealedIndices, setRevealedIndices] = useState<Set<number>>(new Set());
   const [hasAnimated, setHasAnimated] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    let interval;
+    let interval: NodeJS.Timeout | undefined;
     let currentIteration = 0;
 
-    const getNextIndex = (revealedSet) => {
+    const getNextIndex = (revealedSet: Set<number>): number => {
       const textLength = text.length;
       switch (revealDirection) {
-        case 'start':
-          return revealedSet.size;
-        case 'end':
-          return textLength - 1 - revealedSet.size;
-        case 'center': {
-          const middle = Math.floor(textLength / 2);
-          const offset = Math.floor(revealedSet.size / 2);
-          const nextIndex =
-            revealedSet.size % 2 === 0
-              ? middle + offset
-              : middle - offset - 1;
+      case 'start':
+        return revealedSet.size;
+      case 'end':
+        return textLength - 1 - revealedSet.size;
+      case 'center': {
+        const middle = Math.floor(textLength / 2);
+        const offset = Math.floor(revealedSet.size / 2);
+        const nextIndex =
+        revealedSet.size % 2 === 0
+          ? middle + offset
+          : middle - offset - 1;
 
-          if (nextIndex >= 0 && nextIndex < textLength && !revealedSet.has(nextIndex)) {
-            return nextIndex;
-          }
-          for (let i = 0; i < textLength; i++) {
-            if (!revealedSet.has(i)) return i;
-          }
-          return 0;
+        if (nextIndex >= 0 && nextIndex < textLength && !revealedSet.has(nextIndex)) {
+        return nextIndex;
         }
-        default:
-          return revealedSet.size;
+        for (let i = 0; i < textLength; i++) {
+        if (!revealedSet.has(i)) return i;
+        }
+        return 0;
+      }
+      default:
+        return revealedSet.size;
       }
     };
 
@@ -58,41 +73,51 @@ export default function DecryptedText({
       ? Array.from(new Set(text.split(''))).filter((char) => char !== ' ')
       : characters.split('');
 
-    const shuffleText = (originalText, currentRevealed) => {
+    interface Position {
+      char: string;
+      isSpace: boolean;
+      index: number;
+      isRevealed: boolean;
+    }
+
+    const shuffleText = (
+      originalText: string,
+      currentRevealed: Set<number>
+    ): string => {
       if (useOriginalCharsOnly) {
-        const positions = originalText.split('').map((char, i) => ({
-          char,
-          isSpace: char === ' ',
-          index: i,
-          isRevealed: currentRevealed.has(i),
-        }));
+      const positions: Position[] = originalText.split('').map((char, i) => ({
+        char,
+        isSpace: char === ' ',
+        index: i,
+        isRevealed: currentRevealed.has(i),
+      }));
 
-        const nonSpaceChars = positions
-          .filter((p) => !p.isSpace && !p.isRevealed)
-          .map((p) => p.char);
+      const nonSpaceChars: string[] = positions
+        .filter((p) => !p.isSpace && !p.isRevealed)
+        .map((p) => p.char);
 
-        for (let i = nonSpaceChars.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-            [nonSpaceChars[i], nonSpaceChars[j]] = [nonSpaceChars[j], nonSpaceChars[i]];
-        }
+      for (let i = nonSpaceChars.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [nonSpaceChars[i], nonSpaceChars[j]] = [nonSpaceChars[j], nonSpaceChars[i]];
+      }
 
-        let charIndex = 0;
-        return positions
-          .map((p) => {
-            if (p.isSpace) return ' ';
-            if (p.isRevealed) return originalText[p.index];
-            return nonSpaceChars[charIndex++];
-          })
-          .join('');
+      let charIndex = 0;
+      return positions
+        .map((p) => {
+        if (p.isSpace) return ' ';
+        if (p.isRevealed) return originalText[p.index];
+        return nonSpaceChars[charIndex++];
+        })
+        .join('');
       } else {
-        return originalText
-          .split('')
-          .map((char, i) => {
-            if (char === ' ') return ' ';
-            if (currentRevealed.has(i)) return originalText[i];
-            return availableChars[Math.floor(Math.random() * availableChars.length)];
-          })
-          .join('');
+      return originalText
+        .split('')
+        .map((char, i) => {
+        if (char === ' ') return ' ';
+        if (currentRevealed.has(i)) return originalText[i];
+        return availableChars[Math.floor(Math.random() * availableChars.length)];
+        })
+        .join('');
       }
     };
 
@@ -147,12 +172,16 @@ export default function DecryptedText({
   useEffect(() => {
     if (animateOn !== 'view') return;
 
-    const observerCallback = (entries) => {
+    interface ObserverEntry {
+      isIntersecting: boolean;
+    }
+
+    const observerCallback = (entries: ObserverEntry[]): void => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setIsHovering(true);
-          setHasAnimated(true);
-        }
+      if (entry.isIntersecting && !hasAnimated) {
+        setIsHovering(true);
+        setHasAnimated(true);
+      }
       });
     };
 

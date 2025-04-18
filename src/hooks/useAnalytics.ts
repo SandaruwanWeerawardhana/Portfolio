@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { track } from '@vercel/analytics';
+// import { track } from '@vercel/analytics';
 
 /**
  * Custom hook for tracking analytics events with type safety
@@ -17,7 +17,7 @@ export function useAnalytics() {
     if (!eventName) return;
     
     try {
-      track(eventName, properties);
+      track(eventName, properties as Record<string, unknown>);
     } catch (error) {
       // Silent fail in production, log in development
       if (import.meta.env.DEV) {
@@ -61,3 +61,18 @@ export function useAnalytics() {
     trackInteraction,
   };
 }
+function track(eventName: string, properties: Record<string, unknown>) {
+  // Example implementation using console.log for simplicity
+  console.log('Tracking event:', eventName, 'with properties:', properties);
+
+  // In a real-world scenario, this would send data to an analytics service
+  // Example:
+  // fetch('https://analytics.example.com/track', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({ eventName, properties }),
+  // });
+}
+

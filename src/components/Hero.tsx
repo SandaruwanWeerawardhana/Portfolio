@@ -129,7 +129,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                As a passionate MERN stack developer, I craft innovative and scalable web applications using MongoDB, Express.js, React.js, and Node.js. 
+                As a passionate Full stack developer, I craft innovative and scalable web applications using MongoDB, Express.js, React.js, and Node.js. 
                 I thrive on turning complex challenges into seamless, user-friendly experiences.
                  With a keen eye for detail and a commitment to performance, I bring your ideas to life with precision and creativity.
                  My goal is to create technology that makes a real impact.<br></br> 🚀Lets Build something amazing!

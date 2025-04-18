@@ -32,25 +32,25 @@ const projects = [
     ],
     links: {
       
-      github: 'https://github.com/nilankajayalath/MERN-Chat-App',
+      github: '',
       live: '',
     },
     spotlightColor: 'rgba(100, 121, 167, 0.2)', 
   },
   {
-    title: 'Real Estate Website',
-    description: 'This project focuses on creating a seamless online experience for buyers, sellers, and renters alike.',
-    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=800',
-    techStack: ['React.js', 'Swiper.js', 'React hooks', 'modern CSS','framer motion'],
+    title: 'MOS Burgers Web POS System ',
+    description: 'A web-based system allows cashiers to place customer orders, while admins can manage products and customer information',
+    image: 'https://images.pexels.com/photos/31650325/pexels-photo-31650325/free-photo-of-modern-burger-restaurant-interior-in-mexico.jpeg?auto=compress&cs=tinysrgb&w=600',
+    techStack: ['HTML', 'Tailwing CSS', 'Spring Boot', 'modern CSS'],
     achievements: [
-      'Custom design tailored to the real estate industry.',
+      'Custom design tailored to the Food industry.',
       'Fully responsive for smooth browsing on any device.',
-      'Detailed property listings, search functionality, and easy-to-use contact options.',
+      'Manage Customers, Items, and Orders ',
     ],
     links: {
       
-      github: 'https://github.com/nilankajayalath/Real_Estate_Website',
-      live: 'https://real-estate-web-werm.pages.dev/',
+      github: 'https://github.com/SandaruwanWeerawardhana/mos-frontend.git',
+      live: '',
     },
     spotlightColor: 'rgba(70, 199, 255, 0.2)', 
   },
