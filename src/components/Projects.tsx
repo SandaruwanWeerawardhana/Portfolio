@@ -16,23 +16,24 @@ const projects = [
     ],  
     links: {
       github: 'https://github.com/SandaruwanWeerawardhana/Hospital-Management-System.git',
-      live: '',
+      // live: '',
     },
     spotlightColor: 'rgba(248, 248, 248, 0.2)', 
   },
   {
-    title: 'Real Time Chat App',
-    description: 'A real-time chat app built this project was an incredible learning experience.',
+    title: 'Whatsapp Chat Bot',
+    description: 'A chat bot app built this project was an incredible learning experience.',
     image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=800',
-    techStack: ['React','TailwindCSS', 'Daisy UI', 'Node.js', 'Express.js','Socket.io','MongoDB'],
+    techStack: ['React','Node.js', 'Nest js','Ngrok','Webhook'],
     achievements: [
-      'Authentication & Authorization with JWT',
-      'Real-time messaging with Socket.io',
-      'Global state management with Zustand',
+      'WhatsApp Webhook Integration',
+      'OpenAI GPT models to generate context-aware and intelligent replies to user messages',
+      'Built with NestJS, ensuring a clean, maintainable, and scalable codebase',
+      'Includes comprehensive tests to validate functionality and ensure reliability',
     ],
     links: {
       
-      github: '',
+      github: 'https://github.com/SandaruwanWeerawardhana/Whatapp-bot.git',
       live: '',
     },
     spotlightColor: 'rgba(100, 121, 167, 0.2)', 
@@ -50,7 +51,7 @@ const projects = [
     links: {
       
       github: 'https://github.com/SandaruwanWeerawardhana/mos-frontend.git',
-      live: '',
+      // live: '',
     },
     spotlightColor: 'rgba(70, 199, 255, 0.2)', 
   },
@@ -67,8 +68,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">Showcasing my best work and technical expertise</p>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300">Showcasing my best work and technical exprience</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -157,6 +158,7 @@ const Projects = () => {
                       <span>Live Demo</span>
                     </a>
                   </div>
+                  
                 </div>
               </SpotlightCard>
             </motion.div>
