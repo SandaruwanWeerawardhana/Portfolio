@@ -144,7 +144,7 @@ const Hero = () => {
               >
                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                   <motion.a
-                    href="#"
+                    href="public/assets/Sandaruwan Weerawardhana.pdf"
                     target="_blank" 
                     download
                     onClick={handleResumeClick}

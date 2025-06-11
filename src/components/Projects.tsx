@@ -4,20 +4,21 @@ import SpotlightCard from './SpotlightCard';
 
 const projects = [
   {
-    title: 'Hospital Management POS System',
-    description: 'This has been a great learning experience as I continue refining my skills in Java Fx',
-    image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=600',
-    techStack: ['Core Java ', 'Java FX', 'Hibernate','Mysql'],
+    title: 'Car Rent System',
+    description: 'A Car Rental Management System designed for rental operations',
+    image: 'https://www.fleetroot.com/wp-content/uploads/2020/08/20-features-in-car-rental-software-in-2020-1.jpg',
+    techStack: ['Spring Boot', 'React', 'Hibernate','Mysql','JWT','Docker','AWS(S3)'],
     achievements: [
-      'Built using Java Fx for the GUI, providing a Desktop interface.',
-      'Database integration with Hibernate ORM',
-      'Role-based access control',
-      'Uses MySQL for database management',
+      'Browse available cars for rent',
+      'Book and manage car rentals',
+      'Customer registration and authentication',
+      'Admin panel for managing cars, rentals, and users',
     ],  
     links: {
-      github: 'https://github.com/SandaruwanWeerawardhana/Hospital-Management-System.git',
+      github: 'https://github.com/SandaruwanWeerawardhana/SoloRent-Frontend.git',
       // live: '',
     },
+    
     spotlightColor: 'rgba(248, 248, 248, 0.2)', 
   },
   {
@@ -37,6 +38,40 @@ const projects = [
       live: '',
     },
     spotlightColor: 'rgba(100, 121, 167, 0.2)', 
+  },
+   {
+    title: 'Feedback Management System',
+    description: 'This feedback management system use manage and process user feedback.',
+    image: 'https://www.shutterstock.com/image-photo/manager-collects-information-customer-satisfaction-600nw-2523580339.jpg',
+    techStack: ['Node.js', 'React', 'TypeScript', 'Mysql', 'Express', 'Tailwind CSS'],
+    achievements: [
+      'Feedback form and submission',
+      'Admin dashboard for managing feedback',
+      'Responsive, modern UI with Tailwind CSS',
+      'Form validation and user feedback',
+    ],  
+    links: {
+      github: 'https://github.com/SandaruwanWeerawardhana/Feedback-Management-System-frontend.git',
+      // live: '',
+    },
+    spotlightColor: 'rgba(248, 248, 248, 0.2)', 
+  },
+   {
+    title: 'Hospital Management POS System',
+    description: 'This has been a great learning experience as I continue refining my skills in Java Fx',
+    image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=600',
+    techStack: ['Core Java ', 'Java FX', 'Hibernate','Mysql'],
+    achievements: [
+      'Built using Java Fx for the GUI, providing a Desktop interface.',
+      'Database integration with Hibernate ORM',
+      'Role-based access control',
+      'Uses MySQL for database management',
+    ],  
+    links: {
+      github: 'https://github.com/SandaruwanWeerawardhana/Hospital-Management-System.git',
+      // live: '',
+    },
+    spotlightColor: 'rgba(248, 248, 248, 0.2)', 
   },
   {
     title: 'MOS Burgers Web POS System ',

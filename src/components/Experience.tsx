@@ -48,9 +48,7 @@ const Experience = () => {
                 <p className="text-gray-500 dark:text-gray-400 mb-4">
                   2024 - present
                 </p>
-                <p className="font-medium text-gray-700 dark:text-gray-200 mb-2">
-                  Relevant Coursework:
-                </p>
+                
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-600 dark:text-gray-300">
                   <li className="flex items-center">
                     <span

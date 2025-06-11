@@ -18,10 +18,13 @@ const skillCategories = [
   {
     title: 'Backend Development',
     skills: [
-      { name: 'Spring', icon: 'https://skillicons.dev/icons?i=spring' },
+      { name: 'Spring Boot', icon: 'https://skillicons.dev/icons?i=spring' },
       { name: 'Hibernate', icon: 'https://skillicons.dev/icons?i=hibernate' },
       // { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
       { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+      { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
+      { name: 'Nest.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg' },
+      { name: 'Express.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg' },
     ],
   },
   {
@@ -32,15 +35,14 @@ const skillCategories = [
     ],
   },
   {
-    title: 'Development Tools',
+    title: 'Other',
     skills: [
-      { name: 'NPM', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg' },
-      { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg' },
       { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
       { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
       { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
       { name: 'Postman', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
-      { name: 'Intellj', icon: 'https://skillicons.dev/icons?i=idea' },
+      { name: 'IntelliJ', icon: 'https://skillicons.dev/icons?i=idea' },
+      { name: 'Docker', icon: 'https://skillicons.dev/icons?i=docker' },
     ],
   },
 ];
