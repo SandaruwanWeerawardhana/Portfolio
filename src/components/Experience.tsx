@@ -41,14 +41,40 @@ const Experience = () => {
               className="bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 shadow-lg p-8"
               spotlightColor="rgba(100, 121, 167, 0.15)"
             >
+              <div className="flex-1 mt-5">
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Bachelor of Information Technology "(UG)"
+                </h4>
+                <p className="text-gray-500 dark:text-gray-400 mb-0">
+                  2025 - Present
+                </p>
+                <p className="text-gray-500 dark:text-gray-400 mb-4">
+                  University of Moratuwa
+                </p>
+                {/* <p className="font-medium text-gray-700 dark:text-gray-200 mb-2">
+                  Relevant Coursework:
+                </p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-600 dark:text-gray-300">
+                  <li className="flex items-center">
+                    <span
+                      className="w-2 h-2 mr-2 bg-primary-600 dark:bg-primary-400 rounded-full"
+                      aria-hidden="true"
+                    ></span>
+                    <span>Object-Oriented Programming</span>
+                  </li>
+                </ul> */}
+              </div>
+                  <hr />
               <div className="flex-1">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   Diploma in Software Engineering
                 </h4>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">
-                  2024 - present
+                  2024 - 2025 <br />
+                  Institute of Computer Engineering Technology (iCET)
+
                 </p>
-                
+
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-600 dark:text-gray-300">
                   <li className="flex items-center">
                     <span
@@ -103,7 +129,7 @@ const Experience = () => {
                   2021-2024
                 </p>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Mihindu Central College, Agalawatta	
+                  Mihindu Central College, Agalawatta
                 </p>
                 {/* <p className="font-medium text-gray-700 dark:text-gray-200 mb-2">
                   Relevant Coursework:
@@ -128,7 +154,7 @@ const Experience = () => {
                   2015-2020
                 </p>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Meril Kariyawasam Central College, Meegahathanna
+                  Meril Kariyawasam Central College, Meegahathanna
                 </p>
                 {/* <p className="font-medium text-gray-700 dark:text-gray-200 mb-2">
                   Relevant Coursework:
@@ -218,7 +244,7 @@ const Experience = () => {
                     </p>
                   </div>
                 </li>
-                
+
                 <li className="flex items-start">
                   <div className="flex-shrink-0 bg-white dark:bg-gray-700 p-2 rounded-lg shadow-sm mr-4">
                     <img
@@ -238,7 +264,7 @@ const Experience = () => {
                         rel="noopener noreferrer"
                         className="text-primary-600 dark:text-primary-400 hover:underline inline-flex items-center"
                       >
-                         CoDeKu DevOps Academy
+                        CoDeKu DevOps Academy
                         <span className="ml-1">↗</span>
                       </a>
                     </p>
@@ -264,7 +290,7 @@ const Experience = () => {
                         rel="noopener noreferrer"
                         className="text-primary-600 dark:text-primary-400 hover:underline inline-flex items-center"
                       >
-                         HackerRank
+                        HackerRank
                         <span className="ml-1">↗</span>
                       </a>
                     </p>
