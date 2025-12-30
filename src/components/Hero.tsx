@@ -4,7 +4,7 @@ import { Github, Linkedin,FileText, ChevronDown, Briefcase } from 'lucide-react'
 import { Link } from 'react-scroll';
 import DecryptedText from './DecryptedText';
 import { useAnalytics } from '../hooks/useAnalytics';
-import dp from '../../public/assets/dp.jpg';
+import dp from '../../public/assets/dp.png';
 
 const Hero = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
