@@ -74,8 +74,8 @@ const Contact = () => {
   );
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 bg-transparent">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,13 +101,13 @@ const Contact = () => {
               className="md:col-span-1"
             >
               <SpotlightCard
-                className="h-full bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 shadow-lg"
+                className="h-full glass-card p-6"
                 spotlightColor="rgba(70, 119, 255, 0.15)"
               >
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-                  <span className="bg-primary-100 dark:bg-primary-900/30 rounded-lg p-2 mr-3 inline-flex">
+                <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                  <span className="bg-primary-900/30 rounded-lg p-2 mr-3 inline-flex">
                     <MdEmail
-                      className="h-5 w-5 text-primary-600 dark:text-primary-400"
+                      className="h-5 w-5 text-primary-400"
                       aria-hidden="true"
                     />
                   </span>
@@ -115,21 +115,21 @@ const Contact = () => {
                 </h3>
 
                 <div className="space-y-6">
-                  <div className="bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700/50 rounded-lg p-4 transition-colors duration-200">
-                    <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
+                  <div className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors duration-200 border border-white/5">
+                    <h4 className="font-medium text-gray-200 mb-2">
                       Email
                     </h4>
                     <a
-                      href="mailto:nilankajayalath12@gmail.com"
-                      className="text-primary-600 dark:text-primary-400 hover:underline inline-block truncate max-w-full"
+                      href="mailto:weerawardanasw@gmail.com"
+                      className="text-primary-400 hover:underline inline-block truncate max-w-full"
                       style={{ wordBreak: "break-word" }}
                     >
                       weerawardanasw@gmail.com
                     </a>
                   </div>
 
-                  <div className="bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700/50 rounded-lg p-4 transition-colors duration-200">
-                    <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-3">
+                  <div className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors duration-200 border border-white/5">
+                    <h4 className="font-medium text-gray-200 mb-3">
                       Connect
                     </h4>
                     <div className="flex space-x-3">
@@ -137,7 +137,7 @@ const Contact = () => {
                         href="https://github.com/SandaruwanWeerawardhana"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-100 dark:bg-gray-700 hover:bg-primary-50 dark:hover:bg-primary-900/30 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 p-3 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                        className="bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white p-3 rounded-lg transition-colors duration-200 flex items-center gap-2"
                         aria-label="GitHub Profile"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.97 }}
@@ -149,7 +149,7 @@ const Contact = () => {
                         href="https://www.linkedin.com/in/sandaruwan-linkdin/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-100 dark:bg-gray-700 hover:bg-primary-50 dark:hover:bg-primary-900/30 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 p-3 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                        className="bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white p-3 rounded-lg transition-colors duration-200 flex items-center gap-2"
                         aria-label="LinkedIn Profile"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.97 }}
@@ -160,8 +160,8 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/10 dark:to-blue-900/10 p-4 rounded-lg border border-primary-100 dark:border-primary-800/20">
-                    <p className="text-gray-700 dark:text-gray-300 text-sm italic">
+                  <div className="bg-primary-900/10 p-4 rounded-lg border border-primary-500/20">
+                    <p className="text-gray-300 text-sm italic">
                       "I'm currently available for work and open to discussing
                       new opportunities. Feel free to reach out!"
                     </p>
@@ -179,10 +179,10 @@ const Contact = () => {
               className="md:col-span-2"
             >
               <SpotlightCard
-                className="bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 shadow-lg p-8"
+                className="glass-card p-8"
                 spotlightColor="rgba(99, 102, 241, 0.15)"
               >
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                <h3 className="text-xl font-bold text-white mb-6">
                   Send Me a Message
                 </h3>
 
@@ -192,14 +192,13 @@ const Contact = () => {
                       <div>
                         <label
                           htmlFor="name"
-                          className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+                          className="block mb-2 text-sm font-medium text-gray-300"
                         >
                           Name
                         </label>
                         <div
-                          className={`relative ${
-                            focusedField === "name"? "ring-2 ring-primary-300 dark:ring-primary-700 rounded-lg": ""
-                          }`}
+                          className={`relative ${focusedField === "name" ? "ring-2 ring-primary-500/50 rounded-lg" : ""
+                            }`}
                         >
                           <input
                             type="text"
@@ -209,7 +208,7 @@ const Contact = () => {
                             onChange={handleChange}
                             onFocus={() => setFocusedField("name")}
                             onBlur={() => setFocusedField(null)}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-primary-500 dark:focus:border-primary-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-600 focus:border-primary-500 bg-white/5 text-white placeholder-gray-500 transition-all duration-200 outline-none"
                             placeholder="Enter Your name"
                             required
                           />
@@ -219,16 +218,15 @@ const Contact = () => {
                       <div>
                         <label
                           htmlFor="email"
-                          className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+                          className="block mb-2 text-sm font-medium text-gray-300"
                         >
                           Email
                         </label>
                         <div
-                          className={`relative ${
-                            focusedField === "email"
-                              ? "ring-2 ring-primary-300 dark:ring-primary-700 rounded-lg"
+                          className={`relative ${focusedField === "email"
+                              ? "ring-2 ring-primary-500/50 rounded-lg"
                               : ""
-                          }`}
+                            }`}
                         >
                           <input
                             type="email"
@@ -238,7 +236,7 @@ const Contact = () => {
                             onChange={handleChange}
                             onFocus={() => setFocusedField("email")}
                             onBlur={() => setFocusedField(null)}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-primary-500 dark:focus:border-primary-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-600 focus:border-primary-500 bg-white/5 text-white placeholder-gray-500 transition-all duration-200 outline-none"
                             placeholder="Enter Your Email"
                             required
                           />
@@ -249,16 +247,15 @@ const Contact = () => {
                     <div>
                       <label
                         htmlFor="message"
-                        className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+                        className="block mb-2 text-sm font-medium text-gray-300"
                       >
                         Message
                       </label>
                       <div
-                        className={`relative ${
-                          focusedField === "message"
-                            ? "ring-2 ring-primary-300 dark:ring-primary-700 rounded-lg"
+                        className={`relative ${focusedField === "message"
+                            ? "ring-2 ring-primary-500/50 rounded-lg"
                             : ""
-                        }`}
+                          }`}
                       >
                         <textarea
                           id="message"
@@ -268,12 +265,12 @@ const Contact = () => {
                           onFocus={() => setFocusedField("message")}
                           onBlur={() => setFocusedField(null)}
                           rows={5}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-primary-500 dark:focus:border-primary-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none transition-all duration-200"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-600 focus:border-primary-500 bg-white/5 text-white placeholder-gray-500 resize-none transition-all duration-200 outline-none"
                           placeholder="How can I help you?"
                           required
                         />
                       </div>
-                      <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                      <p className="mt-1 text-xs text-gray-400">
                         I'll get back to you as soon as possible.
                       </p>
                     </div>
@@ -282,7 +279,7 @@ const Contact = () => {
                       <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-red-600 dark:text-red-400 text-sm bg-red-50 dark:bg-red-900/10 p-3 rounded-lg border border-red-100 dark:border-red-800/20"
+                        className="text-red-400 text-sm bg-red-900/20 p-3 rounded-lg border border-red-800/50"
                       >
                         {submitError}
                       </motion.div>
@@ -292,7 +289,7 @@ const Contact = () => {
                       <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-green-600 dark:text-green-400 text-sm bg-green-50 dark:bg-green-900/10 p-3 rounded-lg border border-green-100 dark:border-green-800/20"
+                        className="text-green-400 text-sm bg-green-900/20 p-3 rounded-lg border border-green-800/50"
                       >
                         <div className="flex items-center">
                           <svg
@@ -319,9 +316,8 @@ const Contact = () => {
                       <motion.button
                         type="submit"
                         disabled={isSubmitting}
-                        className={`w-full px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-800 text-white font-medium transition-all duration-200 flex items-center justify-center ${
-                          isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                        }`}
+                        className={`w-full px-6 py-3 rounded-lg btn-primary text-white font-medium transition-all duration-200 flex items-center justify-center ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                          }`}
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.98 }}
                       >

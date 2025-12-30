@@ -7,25 +7,25 @@ const projects = [
     title: 'Car Rent System',
     description: 'A Car Rental Management System designed for rental operations',
     image: 'https://www.fleetroot.com/wp-content/uploads/2020/08/20-features-in-car-rental-software-in-2020-1.jpg',
-    techStack: ['Spring Boot', 'React', 'Hibernate','Mysql','JWT','Docker','AWS(S3)'],
+    techStack: ['Spring Boot', 'React', 'Hibernate', 'Mysql', 'JWT', 'Docker', 'AWS(S3)'],
     achievements: [
       'Browse available cars for rent',
       'Book and manage car rentals',
       'Customer registration and authentication',
       'Admin panel for managing cars, rentals, and users',
-    ],  
+    ],
     links: {
       github: 'https://github.com/SandaruwanWeerawardhana/SoloRent-Frontend.git',
       // live: '',
     },
-    
-    spotlightColor: 'rgba(248, 248, 248, 0.2)', 
+
+    spotlightColor: 'rgba(248, 248, 248, 0.2)',
   },
   {
     title: 'Whatsapp Chat Bot',
     description: 'A chat bot app built this project was an incredible learning experience.',
     image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=800',
-    techStack: ['React','Node.js', 'Nest js','Ngrok','Webhook'],
+    techStack: ['React', 'Node.js', 'Nest js', 'Ngrok', 'Webhook'],
     achievements: [
       'WhatsApp Webhook Integration',
       'OpenAI GPT models to generate context-aware and intelligent replies to user messages',
@@ -33,13 +33,13 @@ const projects = [
       'Includes comprehensive tests to validate functionality and ensure reliability',
     ],
     links: {
-      
+
       github: 'https://github.com/SandaruwanWeerawardhana/Whatapp-bot.git',
       live: '',
     },
-    spotlightColor: 'rgba(100, 121, 167, 0.2)', 
+    spotlightColor: 'rgba(100, 121, 167, 0.2)',
   },
-   {
+  {
     title: 'Feedback Management System',
     description: 'This feedback management system use manage and process user feedback.',
     image: 'https://www.shutterstock.com/image-photo/manager-collects-information-customer-satisfaction-600nw-2523580339.jpg',
@@ -49,29 +49,29 @@ const projects = [
       'Admin dashboard for managing feedback',
       'Responsive, modern UI with Tailwind CSS',
       'Form validation and user feedback',
-    ],  
+    ],
     links: {
       github: 'https://github.com/SandaruwanWeerawardhana/Feedback-Management-System-frontend.git',
       // live: '',
     },
-    spotlightColor: 'rgba(248, 248, 248, 0.2)', 
+    spotlightColor: 'rgba(248, 248, 248, 0.2)',
   },
-   {
+  {
     title: 'Hospital Management POS System',
     description: 'This has been a great learning experience as I continue refining my skills in Java Fx',
     image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=600',
-    techStack: ['Core Java ', 'Java FX', 'Hibernate','Mysql'],
+    techStack: ['Core Java ', 'Java FX', 'Hibernate', 'Mysql'],
     achievements: [
       'Built using Java Fx for the GUI, providing a Desktop interface.',
       'Database integration with Hibernate ORM',
       'Role-based access control',
       'Uses MySQL for database management',
-    ],  
+    ],
     links: {
       github: 'https://github.com/SandaruwanWeerawardhana/Hospital-Management-System.git',
       // live: '',
     },
-    spotlightColor: 'rgba(248, 248, 248, 0.2)', 
+    spotlightColor: 'rgba(248, 248, 248, 0.2)',
   },
   {
     title: 'MOS Burgers Web POS System ',
@@ -84,18 +84,21 @@ const projects = [
       'Manage Customers, Items, and Orders ',
     ],
     links: {
-      
+
       github: 'https://github.com/SandaruwanWeerawardhana/mos-frontend.git',
       // live: '',
     },
-    spotlightColor: 'rgba(70, 199, 255, 0.2)', 
+    spotlightColor: 'rgba(70, 199, 255, 0.2)',
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-900/10 rounded-full mix-blend-screen filter blur-3xl opacity-20 pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,8 +106,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">Showcasing my best work and technical exprience</p>
+          <h2 className="section-title">Projects</h2>
+          <p className="section-subtitle">Showcasing my best work and technical experience</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -117,11 +120,11 @@ const Projects = () => {
               viewport={{ once: true }}
               className="flex"
             >
-              <SpotlightCard 
-                className="h-full w-full bg-white dark:bg-gray-900 border-gray-100 dark:border-gray-700 flex flex-col hover:shadow-xl transition-shadow duration-300" 
+              <SpotlightCard
+                className="h-full w-full glass-card flex flex-col hover:shadow-glow/20 transition-all duration-300"
                 spotlightColor={project.spotlightColor}
               >
-                <div className="relative aspect-video overflow-hidden rounded-lg mb-4">
+                <div className="relative aspect-video overflow-hidden rounded-lg mb-4 border border-white/5">
                   <img
                     src={project.image}
                     alt={`${project.title} screenshot`}
@@ -131,29 +134,29 @@ const Projects = () => {
                       e.currentTarget.src = "https://via.placeholder.com/16x9?text=Project+Image";
                     }}
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/60 hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 hover:opacity-100 backdrop-blur-sm">
                     <a
                       href={project.links.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white dark:bg-gray-800 p-2 rounded-full transform scale-75 hover:scale-100 transition-all duration-200"
+                      className="bg-white/10 border border-white/20 p-3 rounded-full transform scale-75 hover:scale-100 transition-all duration-200 hover:bg-primary-600 hover:border-primary-500"
                       aria-label={`View ${project.title} demo`}
                     >
-                      <ExternalLink className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                      <ExternalLink className="w-6 h-6 text-white" />
                     </a>
                   </div>
                 </div>
-                <div className="flex-1 flex flex-col p-4">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{project.description}</p>
-                  
+                <div className="flex-1 flex flex-col p-2">
+                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4 line-clamp-3 text-sm leading-relaxed">{project.description}</p>
+
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Tech Stack:</h4>
+                    <h4 className="text-xs font-semibold text-primary-400 mb-2 uppercase tracking-wider">Tech Stack:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-0.5 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full text-xs"
+                          className="px-2 py-0.5 bg-white/5 border border-white/10 text-gray-300 rounded-full text-xs hover:bg-white/10 transition-colors"
                         >
                           {tech}
                         </span>
@@ -162,54 +165,55 @@ const Projects = () => {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Key Achievements:</h4>
+                    <h4 className="text-xs font-semibold text-primary-400 mb-2 uppercase tracking-wider">Key Achievements:</h4>
                     <ul className="space-y-2">
                       {project.achievements.map((achievement) => (
-                        <li key={achievement} className="flex items-start text-xs text-gray-600 dark:text-gray-300">
-                          <span className="w-1.5 h-1.5 mt-1 mr-1.5 bg-primary-600 dark:bg-primary-400 rounded-full flex-shrink-0"></span>
+                        <li key={achievement} className="flex items-start text-xs text-gray-400">
+                          <span className="w-1.5 h-1.5 mt-1 mr-2 bg-primary-500 rounded-full flex-shrink-0"></span>
                           <span className="line-clamp-2">{achievement}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex space-x-6 mt-auto pt-3 border-t border-gray-100 dark:border-gray-700">
+                  <div className="flex space-x-6 mt-auto pt-4 border-t border-white/5">
                     <a
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 text-sm transition-colors duration-200"
+                      className="flex items-center text-gray-400 hover:text-white text-sm transition-colors duration-200 group"
                     >
-                      <Github className="w-4 h-4 mr-2" />
+                      <Github className="w-4 h-4 mr-2 group-hover:text-primary-400 transition-colors" />
                       <span>Code</span>
                     </a>
-                    <a
-                      href={project.links.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 text-sm transition-colors duration-200"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      <span>Live Demo</span>
-                    </a>
+                    {project.links.live && (
+                      <a
+                        href={project.links.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gray-400 hover:text-white text-sm transition-colors duration-200 group"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2 group-hover:text-primary-400 transition-colors" />
+                        <span>Live Demo</span>
+                      </a>
+                    )}
                   </div>
-                  
+
                 </div>
               </SpotlightCard>
             </motion.div>
           ))}
         </div>
-        
-        
+
         {/* View more projects button */}
         <div className="mt-16 text-center">
           <motion.a
             href="https://github.com/SandaruwanWeerawardhana?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded-lg transition-all duration-200 font-medium hover:-translate-y-1"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="btn-outline inline-flex items-center hover:bg-white/5 border-primary-500/30 text-primary-400 hover:text-primary-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             View All Projects
             <ArrowRight className="ml-2 w-4 h-4" />

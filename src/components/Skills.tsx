@@ -7,7 +7,7 @@ const skillCategories = [
     skills: [
       { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
       { name: 'TypeScript', icon: 'https://skillicons.dev/icons?i=ts' },
-      { name: 'Angular', icon: 'https://skillicons.dev/icons?i=angular' }, 
+      { name: 'Angular', icon: 'https://skillicons.dev/icons?i=angular' },
       { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
       { name: 'TailwindCSS', icon: 'https://skillicons.dev/icons?i=tailwind' },
       { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
@@ -52,8 +52,8 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-20 relative">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,30 +76,30 @@ const Skills = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <SpotlightCard 
-                className="bg-white dark:bg-gray-900 p-8 hover:shadow-2xl transition-shadow duration-300 border-gray-100 dark:border-gray-700 h-full"
-                spotlightColor={index % 2 === 0 ? "rgba(26, 171, 255, 0.15)" : "rgba(100, 121, 167, 0.15)"}
+              <SpotlightCard
+                className="glass-card h-full"
+                spotlightColor={index % 2 === 0 ? "rgba(14, 165, 233, 0.15)" : "rgba(139, 92, 246, 0.15)"}
               >
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">{category.title}</h3>
-                <ul className="grid grid-cols-3 sm:grid-cols-4 gap-6">
+                <h3 className="text-2xl font-semibold text-white mb-8 border-b border-white/10 pb-4">{category.title}</h3>
+                <ul className="grid grid-cols-3 sm:grid-cols-4 gap-x-6 gap-y-10">
                   {category.skills.map((skill) => (
                     <li key={skill.name}>
                       <motion.div
                         whileHover={{ scale: 1.1 }}
-                        className="flex flex-col items-center"
+                        className="flex flex-col items-center group"
                       >
-                        <div className="w-12 h-12 mb-3 flex items-center justify-center">
+                        <div className="w-14 h-14 mb-4 flex items-center justify-center bg-white/5 rounded-2xl p-3 border border-white/5 group-hover:border-primary-500/30 group-hover:bg-white/10 transition-all duration-300 shadow-lg group-hover:shadow-glow/20">
                           <img
                             src={skill.icon}
                             alt={`${skill.name} icon`}
-                            className="w-10 h-10 object-contain"
+                            className="w-full h-full object-contain filter drop-shadow-lg"
                             loading="lazy"
                             onError={(e) => {
                               e.currentTarget.src = "https://via.placeholder.com/40?text=Icon";
                             }}
                           />
                         </div>
-                        <span className="text-sm text-center font-medium text-gray-700 dark:text-gray-300">
+                        <span className="text-sm text-center font-medium text-gray-400 group-hover:text-white transition-colors">
                           {skill.name}
                         </span>
                       </motion.div>

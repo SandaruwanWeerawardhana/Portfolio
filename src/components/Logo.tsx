@@ -13,12 +13,12 @@ const Logo = () => {
       aria-label="Logo, go to top"
     >
       <div className="flex items-center">
-        <div className="h-9 w-9 flex items-center justify-center rounded-lg bg-primary-900 text-white font-bold text-xl transform rotate-12 hover:rotate-2 transition-transform duration-300">
+        <div className="h-9 w-9 flex items-center justify-center rounded-lg bg-primary-600 text-white font-bold text-xl transform rotate-12 hover:rotate-2 transition-transform duration-300 shadow-glow">
           S
         </div>
-        <span className="text-gray-900 dark:text-white text-xl ml-2 font-medium">
-          <span className="text-primary-600 dark:text-primary-400">Sandaruwan</span>
-           Weerawardhana
+        <span className="text-white text-xl ml-2 font-medium">
+          <span className="text-primary-400">Sandaruwan</span>
+          Weerawardhana
         </span>
       </div>
     </Link>
