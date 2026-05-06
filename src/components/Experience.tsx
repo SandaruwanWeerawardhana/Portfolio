@@ -196,24 +196,23 @@ const Experience = () => {
                 <li className="flex items-start">
                   <div className="flex-shrink-0 bg-white/5 p-2 rounded-lg shadow-sm mr-4 border border-white/5">
                     <img
-                      src="https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png"
-                      alt="Postman API Logo"
+                      src="https://www.google.com/imgres?q=Micro%20Front-End%20Architecture%20with%20React&imgurl=https%3A%2F%2Fb4130876.smushcdn.com%2F4130876%2Fwp-content%2Fuploads%2F2024%2F02%2FUnderstand-Micro-frontend-Architecture.webp%3Flossy%3D2%26strip%3D1%26webp%3D1&imgrefurl=https%3A%2F%2Feluminoustechnologies.com%2Fblog%2Freact-micro-frontend-guide%2F&docid=sJPGxhQidDMXRM&tbnid=A28aWGo_Eb9jtM&vet=12ahUKEwjXmdGmh6WUAxVx3TgGHZn2G6QQnPAOegQIOBAB..i&w=908&h=441&hcb=2&ved=2ahUKEwjXmdGmh6WUAxVx3TgGHZn2G6QQnPAOegQIOBAB"
                       className="w-10 h-10 object-contain"
                     />
                   </div>
 
                   <div>
                     <h4 className="font-semibold text-white">
-                      Postman API
+                      Micro Front-End Architecture with React
                     </h4>
                     <p className="text-gray-400 text-sm">
                       <a
-                        href=""
+                        href="https://www.linkedin.com/learning/certificates/a3dabe725483f9acdd3739b87b7e7264152284cdab15d2819886b6d441a0a03a?trk=share_certificate"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary-400 hover:text-primary-300 hover:underline inline-flex items-center"
                       >
-                        Postman Certificate <span className="ml-1">↗</span>
+                        Micro Front-End Architecture <span className="ml-1">↗</span>
                       </a>
                     </p>
                   </div>
